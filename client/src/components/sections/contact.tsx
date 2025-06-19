@@ -10,11 +10,11 @@ import { apiRequest } from "@/lib/queryClient";
 import {
   Mail,
   MapPin,
-  Download,
   Linkedin,
   Github,
   Send,
   Code,
+  Bot,
 } from "lucide-react";
 
 const contactInfo = [
@@ -98,34 +98,7 @@ export function ContactSection() {
     },
   });
 
-  const downloadResume = async () => {
-    try {
-      const response = await fetch("/api/resume");
-      if (response.ok) {
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "Bhakti_Jagtap_Resume.pdf";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        window.URL.revokeObjectURL(url);
-        toast({
-          title: "Success",
-          description: "Resume downloaded successfully!",
-        });
-      } else {
-        throw new Error("Failed to download resume");
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to download resume. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -272,37 +245,41 @@ export function ContactSection() {
             <Card>
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                  Let's Work Together
+                  Try My AI Assistant
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Connect with me on social platforms or download my resume
+                  Chat with Bhakti's AI Assistant to learn more about my skills and experience
                 </p>
-                <div className="flex items-center space-x-4">
+                <div className="space-y-4">
                   <Button
-                    size="icon"
-                    className="bg-blue-600 hover:bg-blue-700"
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
                     asChild
                   >
-                    <a href="#" title="LinkedIn Profile">
-                      <Linkedin className="h-5 w-5" />
+                    <a href="https://bhaktis-ai-assistant.replit.app" target="_blank" rel="noopener noreferrer">
+                      <Bot className="w-4 h-4 mr-2" />
+                      Chat with Bhakti's AI Assistant
                     </a>
                   </Button>
-                  <Button
-                    size="icon"
-                    className="bg-gray-800 hover:bg-gray-900"
-                    asChild
-                  >
-                    <a href="#" title="GitHub Profile">
-                      <Github className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button
-                    onClick={downloadResume}
-                    className="bg-[var(--java-green)] hover:bg-[var(--spring-green)] flex-1"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Resume
-                  </Button>
+                  <div className="flex items-center space-x-4 justify-center">
+                    <Button
+                      size="icon"
+                      className="bg-blue-600 hover:bg-blue-700"
+                      asChild
+                    >
+                      <a href="https://www.linkedin.com/in/bhaktijagtap" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                        <Linkedin className="h-5 w-5" />
+                      </a>
+                    </Button>
+                    <Button
+                      size="icon"
+                      className="bg-gray-800 hover:bg-gray-900"
+                      asChild
+                    >
+                      <a href="https://github.com/bhaktijagtap" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                        <Github className="h-5 w-5" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
