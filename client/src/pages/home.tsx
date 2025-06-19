@@ -16,8 +16,8 @@ export default function Home() {
         <AboutSection />
         <EducationSection />
         <SkillsSection />
-        <ProjectsSection />
         <CertificationsSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
       
