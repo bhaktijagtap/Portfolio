@@ -21,9 +21,13 @@ export function HeroSection() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Hi, I'm{" "}
-              <span style={{ color: "var(--spring-orange)" }}>Bhakti</span>
+              <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent font-extrabold">
+                Bhakti Jagtap
+              </span>
               <br />
-              Java Developer
+              <span className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
+                Java Developer
+              </span>
             </h1>
             <p className="text-xl mb-8 leading-relaxed opacity-90">
               Passionate about building robust backend systems with Spring Boot,
