@@ -66,11 +66,28 @@ export function CertificationsSection() {
             >
               <Card className="card-hover h-full overflow-hidden bg-white shadow-lg">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={cert.image}
-                    alt={`${cert.title} Certificate`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                  {cert.image.includes('DOC-20250619-WA0000') ? (
+                    <a 
+                      href={cert.image} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 hover:from-blue-100 hover:to-indigo-200 transition-colors duration-300"
+                    >
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-center p-4">
+                          <Award className="mx-auto mb-2 h-12 w-12 text-blue-600" />
+                          <p className="text-sm text-blue-700 font-medium">Certificate Document</p>
+                          <p className="text-xs text-blue-600">Click to view</p>
+                        </div>
+                      </div>
+                    </a>
+                  ) : (
+                    <img
+                      src={cert.image}
+                      alt={`${cert.title} Certificate`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
