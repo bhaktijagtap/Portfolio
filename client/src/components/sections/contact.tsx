@@ -51,6 +51,14 @@ const contactInfo = [
     color: "#00ea64",
   },
   {
+    title: "LeetCode",
+    subtitle: "Check my problem solving",
+    value: "leetcode.com/u/bhakti_jagtap",
+    href: "https://leetcode.com/u/bhakti_jagtap/",
+    icon: Code,
+    color: "#ffa116",
+  },
+  {
     title: "Location",
     subtitle: "Based in",
     value: "Pune, Maharashtra",
@@ -150,7 +158,7 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 mb-12">
           {contactInfo.map((info, index) => (
             <motion.div
               key={info.title}
