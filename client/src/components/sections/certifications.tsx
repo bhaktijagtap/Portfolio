@@ -25,14 +25,14 @@ const certifications = [
     image: "/attached_assets/1737002647816_1750311835487.jpeg",
   },
   {
-    title: "Professional Development Certificate",
-    provider: "Industry Certification",
-    year: "2024",
+    title: "AWS Solutions Architecture Job Simulation",
+    provider: "Forage",
+    year: "2025",
     description:
-      "Professional certification demonstrating expertise in software development and industry best practices.",
+      "Practical AWS solutions architecture training with hands-on experience in designing simple, scalable, hosting architecture.",
     icon: Award,
-    gradient: "from-purple-500 to-pink-500",
-    image: "/attached_assets/DOC-20250619-WA0000__1750311916082",
+    gradient: "from-orange-500 to-yellow-500",
+    image: "/attached_assets/6242086399360746720_1750312879919.jpg",
   },
 ];
 
@@ -66,28 +66,11 @@ export function CertificationsSection() {
             >
               <Card className="card-hover h-full overflow-hidden bg-white shadow-lg">
                 <div className="aspect-[4/3] overflow-hidden">
-                  {cert.image.includes('DOC-20250619-WA0000') ? (
-                    <a 
-                      href={cert.image} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 hover:from-blue-100 hover:to-indigo-200 transition-colors duration-300"
-                    >
-                      <div className="w-full h-full flex items-center justify-center">
-                        <div className="text-center p-4">
-                          <Award className="mx-auto mb-2 h-12 w-12 text-blue-600" />
-                          <p className="text-sm text-blue-700 font-medium">Certificate Document</p>
-                          <p className="text-xs text-blue-600">Click to view</p>
-                        </div>
-                      </div>
-                    </a>
-                  ) : (
-                    <img
-                      src={cert.image}
-                      alt={`${cert.title} Certificate`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  )}
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} Certificate`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
