@@ -21,7 +21,7 @@ export function HeroSection() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent font-extrabold">
+              <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent font-extrabold">
                 Bhakti Jagtap
               </span>
               <br />
