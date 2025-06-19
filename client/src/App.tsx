@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { FloatingAiAssistant } from "@/components/ui/floating-ai-assistant";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
@@ -22,6 +23,7 @@ function App() {
       <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
         <TooltipProvider>
           <Toaster />
+          <FloatingAiAssistant />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

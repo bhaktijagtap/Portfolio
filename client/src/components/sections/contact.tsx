@@ -245,41 +245,30 @@ export function ContactSection() {
             <Card>
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                  Try My AI Assistant
+                  Let's Connect
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Chat with Bhakti's AI Assistant to learn more about my skills and experience
+                  Follow me on social platforms and check out my coding profiles
                 </p>
-                <div className="space-y-4">
+                <div className="flex items-center space-x-4 justify-center">
                   <Button
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                    size="icon"
+                    className="bg-blue-600 hover:bg-blue-700"
                     asChild
                   >
-                    <a href="https://bhaktis-ai-assistant.replit.app" target="_blank" rel="noopener noreferrer">
-                      <Bot className="w-4 h-4 mr-2" />
-                      Chat with Bhakti's AI Assistant
+                    <a href="https://www.linkedin.com/in/bhaktijagtap" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                      <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
-                  <div className="flex items-center space-x-4 justify-center">
-                    <Button
-                      size="icon"
-                      className="bg-blue-600 hover:bg-blue-700"
-                      asChild
-                    >
-                      <a href="https://www.linkedin.com/in/bhaktijagtap" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button
-                      size="icon"
-                      className="bg-gray-800 hover:bg-gray-900"
-                      asChild
-                    >
-                      <a href="https://github.com/bhaktijagtap" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
-                        <Github className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  </div>
+                  <Button
+                    size="icon"
+                    className="bg-gray-800 hover:bg-gray-900"
+                    asChild
+                  >
+                    <a href="https://github.com/bhaktijagtap" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                      <Github className="h-5 w-5" />
+                    </a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
