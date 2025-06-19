@@ -15,7 +15,7 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(122, 39%, 49%);
+  --primary: hsl(200, 100%, 60%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(60, 4.8%, 95.9%);
   --secondary-foreground: hsl(24, 9.8%, 10%);
@@ -26,11 +26,11 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* Java/Spring Boot Colors */
-  --java-green: hsl(122, 39%, 49%);
-  --spring-green: hsl(76, 41%, 53%);
-  --java-orange: hsl(32, 100%, 50%);
-  --spring-orange: hsl(48, 100%, 50%);
+  /* Sky Blue Theme Colors */
+  --java-green: hsl(200, 100%, 60%);
+  --spring-green: hsl(190, 80%, 55%);
+  --java-orange: hsl(210, 100%, 65%);
+  --spring-orange: hsl(220, 90%, 70%);
 }
 
 .dark {
@@ -44,7 +44,7 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(122, 39%, 49%);
+  --primary: hsl(200, 100%, 60%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);
