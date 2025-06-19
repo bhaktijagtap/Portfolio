@@ -9,12 +9,12 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import {
   Mail,
-  Phone,
   MapPin,
   Download,
   Linkedin,
   Github,
   Send,
+  Code,
 } from "lucide-react";
 
 const contactInfo = [
@@ -27,12 +27,28 @@ const contactInfo = [
     color: "var(--java-green)",
   },
   {
-    title: "Phone",
-    subtitle: "Give me a call",
-    value: "+91 7498204861",
-    href: "tel:+917498204861",
-    icon: Phone,
-    color: "var(--spring-green)",
+    title: "LinkedIn",
+    subtitle: "Let's connect professionally",
+    value: "linkedin.com/in/bhaktijagtap",
+    href: "https://www.linkedin.com/in/bhaktijagtap",
+    icon: Linkedin,
+    color: "#0077b5",
+  },
+  {
+    title: "GitHub",
+    subtitle: "Check out my code",
+    value: "github.com/bhaktijagtap",
+    href: "https://github.com/bhaktijagtap",
+    icon: Github,
+    color: "#333",
+  },
+  {
+    title: "HackerRank",
+    subtitle: "View my coding skills",
+    value: "hackerrank.com/bhaktijagtap",
+    href: "https://www.hackerrank.com/bhaktijagtap",
+    icon: Code,
+    color: "#00ea64",
   },
   {
     title: "Location",
@@ -134,7 +150,7 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {contactInfo.map((info, index) => (
             <motion.div
               key={info.title}
