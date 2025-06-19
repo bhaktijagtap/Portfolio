@@ -12,6 +12,7 @@ const certifications = [
       "Comprehensive full-stack development training covering Java fundamentals, web technologies, and modern development practices.",
     icon: IdCard,
     gradient: "from-[var(--java-green)] to-[var(--spring-green)]",
+    image: "/attached_assets/1731501502331_1750311779583.jpeg",
   },
   {
     title: "Java + Spring Boot Certification",
@@ -21,6 +22,17 @@ const certifications = [
       "Advanced training in Java, Spring Boot, REST API development, MVC architecture, Security implementation, and Microservices.",
     icon: Award,
     gradient: "from-[var(--java-orange)] to-[var(--spring-orange)]",
+    image: "/attached_assets/1737002647816_1750311835487.jpeg",
+  },
+  {
+    title: "Professional Development Certificate",
+    provider: "Industry Certification",
+    year: "2024",
+    description:
+      "Professional certification demonstrating expertise in software development and industry best practices.",
+    icon: Award,
+    gradient: "from-purple-500 to-pink-500",
+    image: "/attached_assets/DOC-20250619-WA0000__1750311916082",
   },
 ];
 
@@ -43,7 +55,7 @@ export function CertificationsSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
@@ -52,19 +64,27 @@ export function CertificationsSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card
-                className={`card-hover h-full bg-gradient-to-r ${cert.gradient} text-white`}
-              >
-                <CardContent className="p-8">
+              <Card className="card-hover h-full overflow-hidden bg-white shadow-lg">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} Certificate`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <cert.icon className="text-2xl mr-4 h-8 w-8" />
+                    <cert.icon className="text-2xl mr-3 h-6 w-6" style={{ color: "var(--java-green)" }} />
                     <div>
-                      <h3 className="text-xl font-semibold">{cert.title}</h3>
-                      <p className="opacity-80">{cert.provider}</p>
+                      <h3 className="text-lg font-semibold text-gray-900">{cert.title}</h3>
+                      <p className="text-gray-600">{cert.provider}</p>
                     </div>
                   </div>
-                  <p className="opacity-90 mb-4">{cert.description}</p>
-                  <Badge className="bg-white bg-opacity-20 text-white hover:bg-opacity-30">
+                  <p className="text-gray-600 text-sm mb-4">{cert.description}</p>
+                  <Badge 
+                    className="text-white"
+                    style={{ backgroundColor: "var(--java-green)" }}
+                  >
                     {cert.year}
                   </Badge>
                 </CardContent>
